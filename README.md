@@ -1,4 +1,4 @@
-# Basic Employee Management System With React & .Net Core, JWT Used For Authentication & Authorization
+# Basic Employee Management System With .Net Core & React, JWT Used For Authentication & Authorization
 
 <a href="https://github.com/pritesh6754/EmployeeManagementSystem" target="_blank">Repo link</a>
 
@@ -10,7 +10,7 @@
 
 ## Database Design
 
-The project was carried out dynamically, taking into account the given requirements. Since it is a project with few requirements, the design and implementation was carried out dynamically. Since the most fundamental part of the project is the database, it started with its design and implementation.
+The project was carried out dynamically, taking into account the given requirements. Since it is a project with few requirements, the design and implementation was carried out dynamically. Since the most fundamental part of the project is the database, it started with its design and implementation. Three tables have been created for Business User(i.e.admin), Employees and Department.
 
 In the first place, the attributes that must be found in each entity were considered, they were reflected in a simple analysis. Since not much detail was requested in the project, the analysis part was completed in a short time, I will not talk more about the analysis carried out so as not to lengthen this section.
 
