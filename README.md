@@ -1,10 +1,10 @@
 # Basic Employee Management System With React & .Net Core, JWT Used For Authentication & Authorization
 
-<a href="https://github.com/andresrodriguez55/employeeManagementSystemReactMuiDotNetJwtAuth" target="_blank">Repo link</a>
+<a href="https://github.com/pritesh6754/EmployeeManagementSystem" target="_blank">Repo link</a>
 
 ## Contents
 - Database Design
-- Backend With .NET
+- Backend With .NET 7.0
 - Frontend With React
 - Screenshots
 
@@ -20,13 +20,43 @@ In the first place, the attributes that must be found in each entity were consid
 
 The mapping process was carried out on the result obtained, so it was important to establish a database correctly. I will not mention the constraints needed in the analysis and the data types and length limits to be used for each attribute, so as not to prolong the report, the relevant section can be seen in detail in the scripts.
 
-## Backend With .NET
+## Backend With .NET 7.0
+
+Ensure you have following NuGet Packages installed:
+| Package name									 | Version|
+| -----------------------------------------------|:-----: |
+| `Microsoft.AspNetCore.Authentication.JwtBearer`| `6.0.6`|
+|`Microsoft.EntityFrameworkCore.SqlServer`       | `6.0.0`|
+|`Microsoft.EntityFrameworkCore.Tools`           | `6.0.6`|
+|`Microsoft.AspNetCore.Authentication`           | `2.2.0`|
+|`System.IdentityModel.Tokens.Jwt`               | `6.20.0`|
+|`Microsoft.AspNetCore.Cors`                     | `2.2.0`|
+|`Swashbuckle.AspNetCore`                        | `6.2.3`|            
+
+
+
+Setup correct SQL Server in `appsettings.json` and `EMPLOYEE_DATABASEContext.cs`.
+
+Migrate and update the database
+```
+dotnet ef migrations add InitialCreate
+```
+```
+dotnet ef database update
+```
+
+Create admin user in BusinessUser table setting the username and passwrd as `admin`
 
 After writing the SQL scripts, the backend part was started. Entity Framework was used to implement it quickly and conveniently, so that models of all entities were created, and then control classes were written quickly to include the models.
 
 JSON Web Tokens are used for session recording and data protection, not too detailed, the token is set up with a user name and password to perform the operation in a simple way, each created token has one hour validity. The token is stored in the client's local area.
 
 ## Frontend With React
+Install required libraries and run the frontend by:
+```
+npm i
+npm start
+```
 
 ![](https://drive.google.com/uc?id=12oAbAkcxDBEKhppKtAGlZI8_WdepM18a)
 
