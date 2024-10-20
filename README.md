@@ -12,15 +12,36 @@
 
 The project was carried out dynamically, taking into account the given requirements. Since it is a project with few requirements, the design and implementation was carried out dynamically. Since the most fundamental part of the project is the database, it started with its design and implementation.
 
-![](https://drive.google.com/uc?id=1ZuI7zmGXcX6CL2FuuJOD-bZNdfggo_Px)
-
-In the first place, the attributes that must be found in each entity were considered, they were reflected in a simple analysis. Since not much detail was requested in the project, the analysis part was completed in a short time, I will not talk more about the analysis carried out so as not to lengthen this section. The result of the ER diagram shown above has been reached.
-
-![](https://drive.google.com/uc?id=1v1atljqqxchKAMXB7mADcZYVusRaboD8)
+In the first place, the attributes that must be found in each entity were considered, they were reflected in a simple analysis. Since not much detail was requested in the project, the analysis part was completed in a short time, I will not talk more about the analysis carried out so as not to lengthen this section.
 
 The mapping process was carried out on the result obtained, so it was important to establish a database correctly. I will not mention the constraints needed in the analysis and the data types and length limits to be used for each attribute, so as not to prolong the report, the relevant section can be seen in detail in the scripts.
 
-## Backend With .NET
+## Backend With .NET 7.0
+
+Ensure you have following NuGet Packages installed:
+| Package name									 | Version|
+| -----------------------------------------------|:-----: |
+| `Microsoft.AspNetCore.Authentication.JwtBearer`| `6.0.6`|
+|`Microsoft.EntityFrameworkCore.SqlServer`       | `6.0.0`|
+|`Microsoft.EntityFrameworkCore.Tools`           | `6.0.6`|
+|`Microsoft.AspNetCore.Authentication`           | `2.2.0`|
+|`System.IdentityModel.Tokens.Jwt`               | `6.20.0`|
+|`Microsoft.AspNetCore.Cors`                     | `2.2.0`|
+|`Swashbuckle.AspNetCore`                        | `6.2.3`|            
+
+
+
+Setup correct SQL Server in `appsettings.json` and `EMPLOYEE_DATABASEContext.cs`.
+
+Migrate and update the database
+```
+dotnet ef migrations add InitialCreate
+```
+```
+dotnet ef database update
+```
+
+Create admin user in BUSINESS_USER table setting the username and passwrd as `admin`
 
 After writing the SQL scripts, the backend part was started. Entity Framework was used to implement it quickly and conveniently, so that models of all entities were created, and then control classes were written quickly to include the models.
 
@@ -32,8 +53,6 @@ Install required libraries and run the frontend by:
 npm i
 npm start
 ```
-
-![](https://drive.google.com/uc?id=12oAbAkcxDBEKhppKtAGlZI8_WdepM18a)
 
 Finally, sketches of the interface were made. In addition, the Material UI component library is used to achieve a simple and effective design.
 
