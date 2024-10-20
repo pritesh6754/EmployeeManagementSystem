@@ -1,4 +1,4 @@
-# Basic Employee Management System With .Net Core & React, JWT Used For Authentication & Authorization
+# Employee Management System With .Net Core & React, JWT Used For Authentication & Authorization
 
 <a href="https://github.com/pritesh6754/EmployeeManagementSystem" target="_blank">Repo link</a>
 
