@@ -427,17 +427,17 @@ export default function CRUD()
                     <DataGrid style={crudDataGridStyle} components={{ Toolbar: GridToolbar }}
                         columns={
                         [
-                            {field:"id", headerName:"ID", hideable:false, flex:0.6},
-                            {field:"dName", headerName:"Department", flex:1},
-                            {field:"nationalNumber", headerName:"NIN", flex:0.7},
-                            {field:"fname", headerName:"First Name", flex:1},
-                            {field:"mname", headerName:"Middle Name", flex:1},
-                            {field:"lname", headerName:"Last Name", flex:1},
-                            {field:"adress", headerName:"Address", flex:0.7},
-                            {field:"salary", headerName:"Salary", flex:0.6},
-                            {field:"sex", headerName:"Sex", flex:0.3},
-                            {field:"bDate", headerName:"Birthdate", flex:0.7},
-                            {field: "action", headerName:"Action", sortable:false, hideable:false, filterable:false, flex:1,
+                                { field:"id", headerName:"ID", hideable:false, flex:0.6},
+                                { field: "fname", headerName: "First Name", flex: 1 },
+                                { field: "mname", headerName: "Middle Name", flex: 1 },
+                                { field: "lname", headerName: "Last Name", flex: 1 },
+                                { field: "adress", headerName: "Address", flex: 0.7 },
+                                { field:"dName", headerName:"Department", flex:1},
+                                { field:"nationalNumber", headerName:"NIN", flex:0.7},
+                                { field: "sex", headerName: "Sex", flex: 0.3 },
+                                { field: "bDate", headerName: "Birthdate", flex: 0.7 },
+                                { field:"salary", headerName:"Salary", flex:0.6},
+                                { field: "action", headerName:"Action", sortable:false, hideable:false, filterable:false, flex:1,
                                 renderCell: (employee) => 
                                 (<>
                                         <Button style={editButtonStyle} onClick={()=>openModalEditEmployee(employee.row)}
@@ -477,15 +477,15 @@ export default function CRUD()
        <div>
             <ul className='navigationBar'>
                 <li>
-                    <a href="" onClick={()=>logoutAndGoMain()}>Logout</a>
+                   <a href="" onClick={()=>logoutAndGoMain()}>Logout</a>
                 </li>
             </ul>
             
             <div className='crudContentDiv'>
                 <br/><br/>
-                {departmentsSection()}
-                <br/><br/><br/>
                 {employeesTable()}
+                <br/><br/><br/>
+                {departmentsSection()}
                 <br/><br/>
             </div>
        </div>

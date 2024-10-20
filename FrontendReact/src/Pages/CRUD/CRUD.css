@@ -27,11 +27,9 @@
     background-color: #111;
 }
 
-.crudContentDiv
-{
+.crudContentDiv {
     padding: 0px 40px;
-    background-color: rgba(2, 2, 65, 0.612);
-    
+    background-color: rgb(2, 2, 65, 0.612);
 }
 
 .crudTitle

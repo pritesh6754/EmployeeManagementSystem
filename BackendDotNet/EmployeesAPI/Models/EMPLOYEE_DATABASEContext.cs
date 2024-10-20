@@ -33,7 +33,7 @@ namespace EmployeesAPI.Models
             modelBuilder.Entity<BusinessUser>(entity =>
             {
                 entity.HasKey(e => e.Username)
-                    .HasName("PK__BUSINESS__F3DBC573583A5718");
+                    .HasName("PK_BUSINESS_F3DBC573583A5718");
 
                 entity.ToTable("BUSINESS_USER");
 
@@ -51,7 +51,7 @@ namespace EmployeesAPI.Models
             modelBuilder.Entity<Department>(entity =>
             {
                 entity.HasKey(e => e.DName)
-                    .HasName("PK__DEPARTME__112B23CEBEC94EE3");
+                    .HasName("PK_DEPARTME_112B23CEBEC94EE3");
 
                 entity.ToTable("DEPARTMENT");
 
@@ -65,7 +65,7 @@ namespace EmployeesAPI.Models
             {
                 entity.ToTable("EMPLOYEE");
 
-                entity.HasIndex(e => e.NationalNumber, "UQ__EMPLOYEE__C9C4D897E532BEDB")
+                entity.HasIndex(e => e.NationalNumber, "UQ_EMPLOYEE_C9C4D897E532BEDB")
                     .IsUnique();
 
                 entity.Property(e => e.Id).HasColumnName("id");
@@ -113,7 +113,7 @@ namespace EmployeesAPI.Models
                     .WithMany(p => p.Employees)
                     .HasForeignKey(d => d.DName)
                     .OnDelete(DeleteBehavior.Cascade)
-                    .HasConstraintName("FK__EMPLOYEE__dName__286302EC");
+                    .HasConstraintName("FK_EMPLOYEEdName_286302EC");
             });
 
             OnModelCreatingPartial(modelBuilder);

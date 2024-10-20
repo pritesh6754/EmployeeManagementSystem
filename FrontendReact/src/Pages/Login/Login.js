@@ -71,8 +71,7 @@ export default function Admin()
 
     return(
         <div className="mainDiv">
-            <h2 align='center'>Made by Pritesh Jadhav</h2>
-            <h3 align='center'>Birdi System Assignment</h3>
+            
         <Grid>
             <Paper elevation={12} style={paperStyle}>
                 <Grid align='center'>
@@ -90,9 +89,12 @@ export default function Admin()
 
                     <Button type='submit' color='primary' variant="contained" disabled={disableButton} fullWidth>
                         Sign in
-                    </Button>
-                </form>
-            </Paper>
+                        </Button>
+                        <h5 align='center'>Made by Pritesh Jadhav</h5>
+                    </form>
+                    
+                </Paper>
+                
         </Grid>
         </div>
     );
